@@ -1,0 +1,8 @@
+class Solution:
+    def balancedStringSplit(self, s: str) -> int:
+        a = b = 0
+        for x in s:
+            if x=='R': a+=1
+            if x=='L': a-=1
+            if a==0: b=b+1
+        return b
